@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choisissez votre tournoi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1, h2 {
+      margin: 15px 0;
+      text-align: center;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #FFD700;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .button img {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+    }
+    .button:hover {
+      background-color: #e6c200;
+    }
+    @media (min-width: 600px) {
+      .container {
+        max-width: 80%;
+      }
+      .button {
+        max-width: 400px;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 70%;
+      }
+      .button {
+        max-width: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" 
+         alt="Logo du Club" class="logo">
+  </div>
+  <div class="container">
+    <h1>Choisissez votre tournoi</h1>
+    <a href="diamond.html" class="button" id="diamondButton">
+      <img src="https://www.freeiconspng.com/thumbs/diamond-png/diamond-png-5.png" alt="Diamond Icon"> MAIN EVENT - 6Max - Road to Vegas
+    </a>
+    <a href="gold.html" class="button">
+      <img src="https://png.pngtree.com/png-vector/20231026/ourmid/pngtree-realistic-gold-bars-png-image_10370401.png" alt="Gold Icon"> BATTLE ROYALE - Fullring - Road to Winamax live
+    </a>
+    <a href="silver.html" class="button">
+      <img src="https://pngimg.com/d/silver_PNG17188.png" alt="Silver Icon"> MINI EVENT - Fullring - Road to Charette
+    </a>
+  </div>
+</body>
+</html>

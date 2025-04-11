@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Event - Road to Winamax Live</title>
+  <style>
+    /* Base */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1, h2, h3, p {
+      margin: 15px 0;
+      text-align: center;
+    }
+    /* Bouton style (pour les onglets et pour le bouton de retour) */
+    .button {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #FFD700;
+      color: black;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #e6c200;
+    }
+    /* Bouton de retour spécifique */
+    .retour {
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    /* Onglets */
+    .tabs-section {
+      max-width: 90%;
+      margin: 40px auto 20px;
+      padding-top: 20px;
+      border-top: 2px solid #ccc;
+      text-align: center;
+    }
+    .tab {
+      display: inline-block;
+      margin: 10px 15px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .tab:hover {
+      background-color: #000;
+    }
+    .tab-content {
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: #ffffff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+      text-align: center;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    @media (min-width: 600px) {
+      .button { max-width: 400px; }
+    }
+    @media (min-width: 768px) {
+      .button { max-width: 500px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header avec logo centré -->
+  <div class="header">
+    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" 
+         alt="Logo du Club" class="logo">
+  </div>
+  <!-- Conteneur principal -->
+  <div class="container">
+    <h1>BATTLE ROYALE - ROAD TO WINAMAX LIVE</h1>
+    <h3>Samedi 21 juin 2025 - Day1 - 18:00<br>Inscriptions sur place</h3>
+    <!-- Bouton de retour à la page inscription -->
+    <a href="inscription.html" class="button retour">Retour au choix du tournois</a>
+    <!-- Section d'onglets identique à Diamond -->
+    <div class="tabs-section">
+      <span class="tab" onclick="openTab('prizepool')">Prizepool</span>
+      <span class="tab" onclick="openTab('structure')">Structure</span>
+      <span class="tab" onclick="openTab('inscrits')">Liste des inscrits</span>
+    </div>
+    <!-- Contenu onglet Prizepool -->
+    <div id="prizepool" class="tab-content">
+      <h3>Prizepool</h3>
+      <p>
+        1ère place : Package Winamax Live (valeur 550€)<br>
+        2ème place : Ticket casino (valeur 200€) + Goodies<br>
+        3ème place : Ticket casino (valeur 150€) + Goodies<br>
+        4ème place : Ticket casino (valeur 100€) + Goodies<br>
+        5ème place : Ticket casino (valeur 70€) + Goodies<br>
+        6ème place : Ticket casino (valeur 50€) + Goodies<br>
+        7ème place : Ticket casino (valeur 30€) + Goodies<br>
+        8ème à la 15ème place : Lots divers + Goodies
+      </p>
+    </div>
+    <!-- Contenu onglet Structure avec tableau centré -->
+    <div id="structure" class="tab-content">
+      <h3>Structure du tournoi</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Temps</th>
+            <th>SB</th>
+            <th>BB</th>
+            <th>Ante</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>30</td>
+            <td>25</td>
+            <td>50</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>25</td>
+            <td>50</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>50</td>
+            <td>100</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>75</td>
+            <td>150</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>100</td>
+            <td>200</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>150</td>
+            <td>300</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>200</td>
+            <td>400</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>300</td>
+            <td>600</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>400</td>
+            <td>800</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>500</td>
+            <td>1000</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>600</td>
+            <td>1200</td>
+            <td>1200</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>700</td>
+            <td>1400</td>
+            <td>1400</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>800</td>
+            <td>1600</td>
+            <td>1600</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>900</td>
+            <td>1800</td>
+            <td>1800</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td>2000</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>1200</td>
+            <td>2400</td>
+            <td>2400</td>
+          </tr>
+          <tr>
+            <td>08:00</td>
+            <td>END DAY1</td>
+            <td>END DAY1</td>
+            <td>END DAY1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Contenu onglet Liste des inscrits -->
+    <div id="inscrits" class="tab-content">
+      <h3>Liste des inscrits</h3>
+      <p>Inscription le jour de l'événement</p>
+    </div>
+  </div>
+  <script>
+    function openTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(function(content) {
+        content.classList.remove('active');
+      });
+      document.getElementById(tabName).classList.add('active');
+    }
+  </script>
+</body>
+</html>

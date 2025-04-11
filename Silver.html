@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silver - MINI EVENT</title>
+  <style>
+    /* Base */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
+    .container {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1, h2, h3, p {
+      margin: 15px 0;
+      text-align: center;
+    }
+    /* Bouton style */
+    .button {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: #FFD700;
+      color: black;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #e6c200;
+    }
+    /* Bouton de retour */
+    .retour {
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    /* Onglets identiques à Gold */
+    .tabs-section {
+      max-width: 90%;
+      margin: 40px auto 20px;
+      padding-top: 20px;
+      border-top: 2px solid #ccc;
+      text-align: center;
+    }
+    .tab {
+      display: inline-block;
+      margin: 10px 15px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .tab:hover {
+      background-color: #000;
+    }
+    .tab-content {
+      max-width: 90%;
+      margin: 20px auto;
+      background-color: #ffffff;
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+      text-align: center;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #333;
+      color: #fff;
+    }
+    @media (min-width:600px) {
+      .button { max-width: 400px; }
+    }
+    @media (min-width:768px) {
+      .button { max-width: 500px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header avec logo centré -->
+  <div class="header">
+    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" alt="Logo 19PokerClub" class="logo">
+  </div>
+  <!-- Conteneur principal -->
+  <div class="container">
+    <h1>MINI EVENT - ROAD TO CHARETTE</h1>
+    <h3>Vendredi 20 juin 2025 - 21:00 - CLASSIC<br>Dimanche 22 juin 2025 - 15:00 - OMAHA</h3>
+    <!-- Bouton de retour à inscription -->
+    <a href="inscription.html" class="button retour">Retour à l'inscription</a>
+    <!-- Section d'onglets -->
+    <div class="tabs-section">
+      <span class="tab" onclick="openTab('prizepool')">Prizepool</span>
+      <span class="tab" onclick="openTab('structure')">Structure</span>
+      <span class="tab" onclick="openTab('inscrits')">Liste des inscrits</span>
+    </div>
+    <div id="prizepool" class="tab-content">
+      <h3>Prizepool</h3>
+      <p>
+        1ère place : Ticket Winamax Online(valeur 50€)<br>
+        2ème place : Ticket Winamax Online(valeur 20€)<br>
+        3ème place : Ticket Winamax Online(valeur 10€)<br>
+        4ème et 5iem place : Goodies<br>
+        <br>
+        (Personnalisez selon le prizepool)
+      </p>
+    </div>
+    <div id="structure" class="tab-content">
+      <h3>Structure du tournoi</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Temps</th>
+            <th>SB</th>
+            <th>BB</th>
+            <th>Ante</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15</td>
+            <td>50</td>
+            <td>100</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>100</td>
+            <td>200</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>100</td>
+            <td>200</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>150</td>
+            <td>300</td>
+            <td>150</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>200</td>
+            <td>400</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>250</td>
+            <td>500</td>
+            <td>250</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>300</td>
+            <td>600</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>400</td>
+            <td>800</td>
+            <td>400</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>500</td>
+            <td>1000</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>600</td>
+            <td>1200</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>700</td>
+            <td>1400</td>
+            <td>700</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>800</td>
+            <td>1600</td>
+            <td>800</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>1000</td>
+            <td>2000</td>
+            <td>1000</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>1500</td>
+            <td>3000</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>2000</td>
+            <td>4000</td>
+            <td>4000</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>2500</td>
+            <td>5000</td>
+            <td>5000</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>3000</td>
+            <td>6000</td>
+            <td>6000</td>
+          </tr>
+          <!-- Ajoutez d'autres lignes si nécessaire -->
+        </tbody>
+      </table>
+    </div>
+    <div id="inscrits" class="tab-content">
+      <h3>Liste des inscrits</h3>
+      <p>Inscription sur place le jour de l'événement</p>
+    </div>
+  </div>
+  <script>
+    function openTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(function(content) {
+        content.classList.remove('active');
+      });
+      document.getElementById(tabName).classList.add('active');
+    }
+  </script>
+</body>
+</html>
