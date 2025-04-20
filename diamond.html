@@ -120,11 +120,13 @@
   <div class="container">
     <h1>MAIN EVENT</h1>
     <h3>Du 20 au 22 juin 2025 - 6Max Holdem</h3>
+<div id="already-registered-message" style="display: none; color: red; font-weight: bold; margin-bottom: 20px;">
+</div>
     <!-- Boutons pour choisir Day1 -->
-    <a href="day1a.html" class="button" id="day1a">Day1a - vendredi 20 juin - 19:00 - 78 joueurs max</a>
-    <a href="day1b.html" class="button" id="day1b">Day1b - samedi 21 juin - 09:30 - 78 joueurs max</a>
-    <a href="day1c.html" class="button" id="day1c">Day1c Turbo - samedi 21 juin - 13:00 - 36 joueurs max</a>
-    
+<a href="day1a.html" class="button day1-diamond-btn" id="day1a">Day1a - vendredi 20 juin - 19:00 - 78 joueurs max</a>
+<a href="day1b.html" class="button day1-diamond-btn" id="day1b">Day1b - samedi 21 juin - 09:30 - 78 joueurs max</a>
+<a href="day1c.html" class="button day1-diamond-btn" id="day1c">Day1c Turbo - samedi 21 juin - 13:00 - 36 joueurs max</a>
+
     <!-- Section des onglets -->
     <div class="tabs-section">
       <span class="tab" onclick="openTab('prizepool')">Prizepool</span>
@@ -259,5 +261,31 @@
       document.getElementById(tabName).classList.add('active');
     }
   </script>
+<script>
+  function openTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(function(content) {
+      content.classList.remove('active');
+    });
+    document.getElementById(tabName).classList.add('active');
+  }
+
+  // Désactiver les boutons si le joueur est déjà inscrit
+  document.addEventListener('DOMContentLoaded', () => {
+    const isRegistered = localStorage.getItem('registered');
+    if (isRegistered === 'true') {
+      const dayButtons = document.querySelectorAll('.day1-diamond-btn');
+      dayButtons.forEach(button => {
+        button.style.pointerEvents = 'none';
+        button.style.opacity = '0.5';
+        button.style.cursor = 'not-allowed';
+        button.title = 'Vous êtes déjà inscrit à un Day1 du Diamond Event';
+      });
+      // Afficher le message
+      const messageDiv = document.getElementById('already-registered-message');
+      messageDiv.innerText = "⚠️ Vous êtes déjà inscrit pour un Day1. Si vous rencontrez un problème, contactez-nous: 06.78.31.21.48 ou Facebook: 19pokerclub.";
+      messageDiv.style.display = 'block';
+    }
+  });
+</script>
 </body>
 </html>
