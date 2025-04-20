@@ -21,7 +21,7 @@
       background-color: #ffffff;
       padding: 0px 0;
       text-align: center;
-      font-size: 8vw; /* Ajustement de la taille de la police */
+      font-size: 8vw;
       font-weight: bold;
       margin-bottom: 20px;
     }
@@ -33,7 +33,7 @@
       width: 100%;
       max-width: 1200px;
       justify-content: center;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptation automatique des colonnes */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     .logo-container {
@@ -57,20 +57,34 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
+    .return-button {
+      margin: 60px 0 20px;
+      padding: 12px 24px;
+      background-color: #C8102E;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .return-button:hover {
+      background-color: #a30d25;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 1rem;
       color: #888;
-      margin-top: 40px;
     }
-
   </style>
 </head>
 <body>
   <header></header>
 
-  <!-- Première ligne (4 logos) -->
+  <!-- Première ligne -->
   <div class="logo-grid">
     <div class="logo-container">
       <a href="https://www.winamax.fr" target="_blank">
@@ -94,7 +108,7 @@
     </div>
   </div>
 
-  <!-- Deuxième ligne (4 logos) -->
+  <!-- Deuxième ligne -->
   <div class="logo-grid">
     <div class="logo-container">
       <a href="https://tradi-wood.com" target="_blank">
@@ -118,7 +132,7 @@
     </div>
   </div>
 
-  <!-- Dernière ligne (4 logos) -->
+  <!-- Troisième ligne -->
   <div class="logo-grid">
     <div class="logo-container">
       <a href="https://www.facebook.com/profile.php?id=61572485563321" target="_blank">
@@ -141,9 +155,10 @@
       </a>
     </div>
   </div>
-<br>
-<br>
-<br>
+
+  <!-- Bouton de retour -->
+  <a href="index.html" class="return-button">Retour à l'accueil</a>
+
   <footer>© 2025 19PokerClub. Tous droits réservés.</footer>
 </body>
 </html>
