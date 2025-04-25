@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inscription Day1c Turbo</title>
+  <title>Inscription Day1c</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,9 +12,9 @@
       padding: 0;
     }
     .header {
-      background-color: #ffffff;
       text-align: center;
       padding: 20px;
+      background-color: #ffffff;
     }
     .logo {
       max-width: 100%;
@@ -48,7 +48,7 @@
       margin: 10px 0 5px;
       text-align: center;
     }
-    .button, button {
+    button {
       display: block;
       width: 100%;
       max-width: 300px;
@@ -58,32 +58,32 @@
       color: black;
       text-align: center;
       border-radius: 5px;
-      text-decoration: none;
       border: none;
       font-size: 18px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    .button:hover, button:hover {
+    button:hover {
       background-color: #e6c200;
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" 
-         alt="Logo du Club" class="logo">
+    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" alt="Logo du Club" class="logo">
   </div>
   <div class="container">
-    <h2>INSCRIPTION DAY1C TURBO</h2>
+    <h2>INSCRIPTION DAY1C</h2>
     <form id="form">
       <input type="text" name="nom" placeholder="Nom" required />
       <input type="text" name="prenom" placeholder="Prénom" required />
       <input type="text" name="date_naissance" placeholder="Date de naissance (jj/mm/aaaa)" required />
       <input type="text" name="adresse" placeholder="Adresse" required />
+      <input type="text" name="ville" placeholder="Code postal + Ville" required />
       <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="telephone" placeholder="Numéro de téléphone" required />
       <input type="text" name="club" placeholder="Club" required />
-      <input type="text" name="pseudo" placeholder="Pseudo" required />
+      <input type="text" name="pseudo" placeholder="Pseudo Live" required />
       <input type="text" name="pseudowinamax" placeholder="Pseudo Winamax" />
       <input type="hidden" name="day1" value="Day1c">
       <label for="repas">
@@ -103,16 +103,15 @@
     const form = document.getElementById("form");
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const formData = new FormData(form);
       const data = {};
-      formData.forEach((value, key) => (data[key] = value));
+      new FormData(form).forEach((value, key) => data[key] = value);
       const url = "https://script.google.com/macros/s/AKfycbwoMr9_NGclJEuM14WkvyA7b1Reok-ba4FT30l_CDR4LuhnHIk2L1do9nD0LRcjeDyJEg/exec";
       try {
         await fetch(url, {
           method: "POST",
           mode: "no-cors",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(data)
         });
         localStorage.setItem("registered", "true");
         window.location.href = "merci.html";
