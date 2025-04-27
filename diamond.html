@@ -34,7 +34,6 @@
       margin: 15px 0;
       text-align: center;
     }
-    /* Boutons uniformisés */
     .button {
       display: block;
       width: 100%;
@@ -91,14 +90,21 @@
       border-collapse: collapse;
       margin: 0 auto;
     }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 5px;
-      text-align: center;
-    }
     th {
+      padding: 10px;
+      text-align: center;
       background-color: #333;
       color: #fff;
+      border: 1px solid #ddd;
+    }
+    td {
+      vertical-align: top;
+      text-align: center;
+      padding: 15px;
+      border-left: 1px solid #ccc;
+    }
+    td:first-child {
+      border-left: none; /* Pas de ligne avant la première colonne */
     }
     /* Responsive */
     @media (min-width: 600px) {
@@ -114,638 +120,251 @@
   </style>
 </head>
 <body>
-  <div class="header">
-    <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" alt="Logo du Club" class="logo">
-  </div>
-  <div class="container">
-    <h1>MAIN EVENT - ROAD TO VEGAS</h1>
-    <h3>Du 20 au 22 juin 2025 - 6Max Holdem</h3>
-<div id="already-registered-message" style="display: none; color: red; font-weight: bold; margin-bottom: 20px;">
-</div>
-    <!-- Boutons pour choisir Day1 -->
-<a href="day1a.html" class="button day1-diamond-btn" id="day1a">Day1a - vendredi 20 juin - 19:00 - 51/84 (33 siéges disponibles)</a>
-<a href="day1b.html" class="button day1-diamond-btn" id="day1b">Day1b - samedi 21 juin - 09:30 - 84/84 (1/30 LISTE D'ATTENTE)</a>
-<a href="day1c.html" class="button day1-diamond-btn" id="day1c">Day1c Turbo - samedi 21 juin - 13:00 - 3/36 (33 siéges disponibles)</a>
 
-    <!-- Section des onglets -->
-    <div class="tabs-section">
-      <span class="tab" onclick="openTab('prizepool')">Prizepool</span>
-      <span class="tab" onclick="openTab('structure')">Structure</span>
-      <span class="tab" onclick="openTab('inscrits')">Liste des Inscrits</span>
-    </div>
-    
-    <div id="prizepool" class="tab-content">
-      <h3>Prizepool</h3>
-      <p>
-        1ère place : Package Vegas (valeur 2500€)<br>
-        2ème place : Package Winamax (valeur 570€) + Goodies<br>
-        3ème place : Ticket casino (valeur 250€) + Goodies<br>
-        4ème place : Ticket casino (valeur 150€) + Goodies<br>
-        5ème place : Ticket casino (valeur 100€) + Goodies<br>
-        6ème place : Ticket casino (valeur 70€) + Goodies<br>
-        7ème place : Ticket casino (valeur 50€) + Goodies<br>
-        8ème à la 25ème place : Lots divers + Goodies
-      </p>
-    </div>
-    
-    <div id="structure" class="tab-content">
-      <h3>Structure du tournoi</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Temps</th>
-            <th>SB</th>
-            <th>BB</th>
-            <th>Ante</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>30</td>
-            <td>50</td>
-            <td>100</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>100</td>
-            <td>200</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>150</td>
-            <td>300</td>
-            <td>150</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>200</td>
-            <td>400</td>
-            <td>200</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>250</td>
-            <td>500</td>
-            <td>250</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>300</td>
-            <td>600</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>400</td>
-            <td>800</td>
-            <td>400</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>500</td>
-            <td>1000</td>
-            <td>500</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>600</td>
-            <td>1200</td>
-            <td>600</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>700</td>
-            <td>1400</td>
-            <td>700</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>800</td>
-            <td>1600</td>
-            <td>800</td>
-          </tr>
-          <tr>
-            <td>40</td>
-            <td>900</td>
-            <td>1800</td>
-            <td>900</td>
-          </tr>
-          <tr>
-            <td>40</td>
-            <td>1000</td>
-            <td>2000</td>
-            <td>1000</td>
-          </tr>
-          <tr>
-            <td>07:30</td>
-            <td>END DAY1</td>
-            <td>END DAY1</td>
-            <td>END DAY1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <div id="inscrits" class="tab-content">
-  <h3>Liste des inscrits</h3>
-  <table>
-    <thead>
-      <tr>
-        <th><h3>DAY1A</h3></th>
-        <th><h3>DAY1B</h3></th>
-        <th><h3>DAY1C</h3></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-	<td><h3>INSCRIPTIONS VALIDEES</h3></td>
-        <td><h3>INSCRIPTIONS VALIDEES</h3></td>
-        <td><h3>INSCRIPTIONS VALIDEES</h3></td>
-      </tr>
-      <tr>
-	<td>Andrei Cristea</td>
-        <td>Allebe	Stephanie</td>
-        <td>Alfano	Anthony</td>
-      </tr>
-      <tr>
-        <td>Barbier	Mélanie</td>
-        <td>Besse	Nicolas</td>
-        <td>Clamagirand 	Coralie </td>
-      </tr>
-      <tr>
-        <td>Beausoleil 	Laurent </td>
-        <td>Bonabau	Damien </td>
-        <td>Plouviez	Rémi</td>
-      </tr>
-      <tr>
-        <td>Beconne 	Stéphane </td>
-        <td>Borger 	Frédéric </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Bendjelloul	Tidjani</td>
-        <td>PRIVATE</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Benot 	Laurent </td>
-        <td>Bouyssou	Patrick</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Beylie	Tom</td>
-        <td>Brajon 	herve </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Bizot	Xavier</td>
-        <td>Caetano	Frédéric</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Bonneval	Théo</td>
-        <td>Chene	Yannick</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Bonneval 	Thibaut </td>
-        <td>Collignon	Francis</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Bouyssonie 	Laurent </td>
-        <td>Danguiral	Walter</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Brunoni 	Emilie </td>
-        <td>Dos Santos 	Patrick </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Chabalier	Florent</td>
-        <td>Dumas	liliane</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Chaumel 	Thomas </td>
-        <td>Dumas 	Angelique</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Coutant	Sebastien</td>
-        <td>Duniaud 	Lionel </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Czaharyn	Tatiana</td>
-        <td>Feldmuller 	Christophe </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>David	Julien </td>
-        <td>Février 	Kevin </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>David	Deltreuilh</td>
-        <td>Forrand	Franck</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Dayre	Simon</td>
-        <td>Fuchs	Jerome </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Dedieu 	Eric </td>
-        <td>Galazzo	Alain </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Delage	Maxime</td>
-        <td>Gatineau	Julien</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Delpech	Florian</td>
-        <td>Georget 	Gerard </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Denoux	Jean pierre</td>
-        <td>Godinho 	Nicolas </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Ducruezet 	Olivier </td>
-        <td>Gruson 	Pierre</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Duvalet	Serge</td>
-        <td>Hilaire	Valentin</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Esparbie	Manu</td>
-        <td>Joubert	Alexandra</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Fourgous	Jean-baptiste </td>
-        <td>Kubicki	Théo </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Fred	Smith</td>
-        <td>Laboye 	Christophe </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Froidefond	Antoine</td>
-        <td>Lajoinie 	David</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Garçon 	Gael</td>
-        <td>Landelle 	Dimitri </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Hemery	Kevin </td>
-        <td>Lavent	Pierre</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Jude	Clement</td>
-        <td>Lavigne 	Clément </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Lafont 	Guillaume </td>
-        <td>Lesage	Benoît </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Lager 	Anthony</td>
-        <td>Linguet	Thibault </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Lajoux 	Fabrice </td>
-        <td>Linguet 	Florian</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Larose 	Manuel </td>
-        <td>Lopez de Arechaga 	Christian </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Macedo	Gabriel</td>
-        <td>Lopez de Arechaga 	Julienne </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Madonia 	Jeanpierre </td>
-        <td>Manhes	Antoine </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Mahmoudi 	Myriam </td>
-        <td>Maribas	Daniel</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Mantelet	Fabien</td>
-        <td>Masset	Renaud</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Martins Ribeiro	Jean patrick</td>
-        <td>Maufroy 	David</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Montastier	Jean Patrick</td>
-        <td>Maurinier	Alain</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Mouret	Clément</td>
-        <td>Melckmans	Christophe</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Nespoux	Sylvain</td>
-        <td>Mezaachi	Yacine</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Niveaud	Tom</td>
-        <td>Mohammed 	Frédéric </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Oruc	Faruk</td>
-        <td>Moreau	Vivien</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Puleio	Jose</td>
-        <td>Mouneau	Valentin</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Rigondeau 	Eric</td>
-        <td>Mournetas 	Corinne</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Sibard 	Thomas </td>
-        <td>Oliveira dos Santos 	Antonio </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Texier 	Omessad </td>
-        <td>Pappus	Julien</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>Tisler	Maurice </td>
-        <td>Pédraza	Philippe</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Portebois	Julien</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Pradeau 	Cécile </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Pradels 	Yann</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Rabbath	Pascal</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Ramagnano 	Bruno</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Raposo 	Didier </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Reveil	Lucas</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Reymondoux	Cyril</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Saby	Nathalie </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Segalat 	Thomas</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Sergent	François</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Sou	Sary</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Suaud 	Cédric </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Talamona	François</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Tessier	Maryline</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Thaon 	Serge </td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Vergnault	Christian</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Viaud	Bruno</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>Wilms	Mickael</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td><h3>LISTE D'ATTENTE</h3></td>
-        <td><h3>LISTE D'ATTENTE</h3></td>
-        <td><h3>LISTE D'ATTENTE</h3></td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>-</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <!-- Tu peux rajouter autant de lignes <tr> que nécessaire -->
-    </tbody>
-  </table>
+<div class="header">
+  <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=570x10000:format=png/path/s02cd059ba246facc/image/ie1bab13e63dfccbe/version/1595508526/image.png" alt="Logo du Club" class="logo">
 </div>
+
+<div class="container">
+  <h1>MAIN EVENT - ROAD TO VEGAS</h1>
+  <h3>Du 20 au 22 juin 2025 - 6Max Holdem</h3>
+
+  <div id="already-registered-message" style="display: none; color: red; font-weight: bold; margin-bottom: 20px;"></div>
+
+  <a href="day1a.html" class="button day1-diamond-btn" id="day1a">Day1a - vendredi 20 juin - 19:00 - 51/84 (33 sièges disponibles)</a>
+  <a href="day1b.html" class="button day1-diamond-btn" id="day1b">Day1b - samedi 21 juin - 09:30 - 84/84 (1/30 LISTE D'ATTENTE)</a>
+  <a href="day1c.html" class="button day1-diamond-btn" id="day1c">Day1c Turbo - samedi 21 juin - 13:00 - 3/36 (33 sièges disponibles)</a>
+
+  <div class="tabs-section">
+    <span class="tab" onclick="openTab('prizepool')">Prizepool</span>
+    <span class="tab" onclick="openTab('structure')">Structure</span>
+    <span class="tab" onclick="openTab('inscrits')">Liste des Inscrits</span>
   </div>
-  <script>
-    function openTab(tabName) {
-      document.querySelectorAll('.tab-content').forEach(function(content) {
-        content.classList.remove('active');
-      });
-      document.getElementById(tabName).classList.add('active');
-    }
+
+  <div id="prizepool" class="tab-content">
+    <h3>Prizepool</h3>
+    <p>
+      1ère place : Package Vegas (valeur 2500€)<br>
+      2ème place : Package Winamax (valeur 570€) + Goodies<br>
+      3ème place : Ticket casino (valeur 250€) + Goodies<br>
+      4ème place : Ticket casino (valeur 150€) + Goodies<br>
+      5ème place : Ticket casino (valeur 100€) + Goodies<br>
+      6ème place : Ticket casino (valeur 70€) + Goodies<br>
+      7ème place : Ticket casino (valeur 50€) + Goodies<br>
+      8ème à la 25ème place : Lots divers + Goodies
+    </p>
+  </div>
+
+  <div id="structure" class="tab-content">
+    <h3>Structure du tournoi</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Temps</th>
+          <th>SB</th>
+          <th>BB</th>
+          <th>Ante</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>30</td><td>50</td><td>100</td><td>0</td></tr>
+        <tr><td>30</td><td>100</td><td>200</td><td>100</td></tr>
+        <tr><td>30</td><td>150</td><td>300</td><td>150</td></tr>
+        <tr><td>30</td><td>200</td><td>400</td><td>200</td></tr>
+        <tr><td>30</td><td>250</td><td>500</td><td>250</td></tr>
+        <tr><td>30</td><td>300</td><td>600</td><td>300</td></tr>
+        <tr><td>30</td><td>400</td><td>800</td><td>400</td></tr>
+        <tr><td>30</td><td>500</td><td>1000</td><td>500</td></tr>
+        <tr><td>30</td><td>600</td><td>1200</td><td>600</td></tr>
+        <tr><td>30</td><td>700</td><td>1400</td><td>700</td></tr>
+        <tr><td>30</td><td>800</td><td>1600</td><td>800</td></tr>
+        <tr><td>40</td><td>900</td><td>1800</td><td>900</td></tr>
+        <tr><td>40</td><td>1000</td><td>2000</td><td>1000</td></tr>
+        <tr><td>07:30</td><td>END DAY1</td><td>END DAY1</td><td>END DAY1</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="inscrits" class="tab-content">
+    <h3>Liste des inscrits</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>DAY1A</th>
+          <th>DAY1B</th>
+          <th>DAY1C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h3>INSCRIPTIONS VALIDÉES</h3><br>
+            Andrei 	Cristea <br>
+Barbier	Mélanie<br>
+Beausoleil 	Laurent <br>
+Beconne 	Stéphane <br>
+Bendjelloul	Tidjani<br>
+Benot 	Laurent <br>
+Beylie	Tom<br>
+Bonneval	Théo<br>
+Bonneval 	Thibaut <br>
+Bouyssonie 	Laurent <br>
+Brunoni 	Emilie <br>
+Chabalier	Florent<br>
+Chaumel 	Thomas <br>
+Collin 	Loïc <br>
+Coutant	Sebastien<br>
+Czaharyn	Tatiana<br>
+David	Julien <br>
+David	Deltreuilh<br>
+Davranche	Alexandre<br>
+Dayre	Simon<br>
+Dedieu 	Eric <br>
+Delage	Maxime<br>
+Delpech	Florian<br>
+Denoux	Jean pierre<br>
+Ducruezet 	Olivier <br>
+Duvalet	Serge<br>
+Esparbie	Manu<br>
+Fourgous	Jean-baptiste <br>
+Fred	Smith<br>
+Froidefond	Antoine<br>
+Garçon 	Gael<br>
+Hemery	Kevin <br>
+Jude	Clement<br>
+Lafont 	Guillaume <br>
+Lager 	Anthony<br>
+Lajoux 	Fabrice <br>
+Larose 	Manuel <br>
+Macedo	Gabriel<br>
+Madonia 	Jeanpierre <br>
+Mahmoudi 	Myriam <br>
+Mantelet	Fabien<br>
+Martins Ribeiro	Jean patrick<br>
+Montastier	Jean Patrick<br>
+Mouret	Clément<br>
+Nespoux	Sylvain<br>
+Niveaud	Tom<br>
+Oruc	Faruk<br>
+Rigondeau 	Eric<br>
+Sibard 	Thomas <br>
+Texier 	Omessad <br>
+Tisler	Maurice <br>
+            ...<br>
+          </td>
+          <td>
+            <h3>INSCRIPTIONS VALIDÉES</h3><br>
+            Alanoix	Lionel <br>
+Allebe	Stephanie<br>
+Besse	Nicolas<br>
+Bizot	Xavier<br>
+Bonabau	Damien <br>
+Borger 	Frédéric <br>
+Bouyssou	Patrick<br>
+Brajon 	herve <br>
+Caetano	Frédéric<br>
+Cayre	Emmanuel <br>
+Chene	Yannick<br>
+Collignon	Francis<br>
+Danguiral	Walter<br>
+Dos Santos 	Patrick <br>
+Dumas	liliane<br>
+Dumas 	Angelique<br>
+Duniaud 	Lionel <br>
+Feldmuller 	Christophe <br>
+Février 	Kevin <br>
+Fiorino	Alexandre<br>
+Fort and	Franck<br>
+Fuchs	Jerome <br>
+Galazzo	Alain <br>
+Gatineau	Julien<br>
+Georget 	Gerard <br>
+Godinho 	Nicolas <br>
+Gruson 	Pierre<br>
+Hilaire	Valentin<br>
+Joubert	Alexandra<br>
+Kleinbaum	Amelie<br>
+Kubicki	Théo <br>
+Laboye 	Christophe <br>
+Lajoinie 	David<br>
+Landelle 	Dimitri <br>
+Lavent	Pierre<br>
+Lavigne 	Clément <br>
+Lesage	Benoît <br>
+Linguet	Thibault <br>
+Linguet 	Florian<br>
+Lopez de Arechaga 	Christian <br>
+Lopez de Arechaga 	Julienne <br>
+Manhes	Antoine <br>
+Maribas	Daniel<br>
+Masset	Renaud<br>
+Maufroy 	David<br>
+maurinier	Alain<br>
+Melckmans	Christophe<br>
+Mezaachi	Yacine<br>
+Mohammed 	Frédéric <br>
+Moreau	Vivien<br>
+Mouneau	Valentin<br>
+Mournetas 	Corinne<br>
+Oliveira dos Santos 	Antonio <br>
+Pappus	Julien<br>
+Pédraza	Philippe<br>
+Portebois	Julien<br>
+Portebois 	Franck <br>
+Pradeau 	Cécile <br>
+Pradels 	Yann<br>
+Puleio	Jose<br>
+Rabbath	Pascal<br>
+Ramagnano 	Bruno<br>
+Raposo 	Didier <br>
+Reservé	<br>
+Reservé	<br>
+Reservé	<br>
+Reservé	<br>
+Reservé	<br>
+Reservé	<br>
+Reservé	<br>
+Reservé	<br>
+Reveil	Lucas<br>
+Reymondoux	Cyril<br>
+Saby	Nathalie <br>
+Segalat	Thomas<br>
+Sergent	François<br>
+Sou	Sary<br>
+Suaud 	Cédric <br>
+Talamona	François<br>
+Tessier	Maryline<br>
+Thaon 	Serge <br>
+Vergnault	Christian<br>
+Viaud	Bruno<br>
+Wilms	Mickael<br><br><br>
+<h3>LISTE D'ATTENTE</h3><br>
+Bromo	Charly<br>
+Galant	philippe<br>
+Guinot	isabelle<br>
+          </td>
+          <td>
+            <h3>INSCRIPTIONS VALIDÉES</h3><br><br>
+            Alfano	Anthony<br>
+	    Clamagirand 	Coralie <br>
+	    Plouviez	Rémi<br><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script>
+function openTab(tabName) {
+  var i;
+  var x = document.getElementsByClassName("tab-content");
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.remove("active");
+  }
+  document.getElementById(tabName).classList.add("active");
+}
   </script>
 <script>
   function openTab(tabName) {
